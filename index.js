@@ -13,7 +13,7 @@ module.exports = function (t) {
     cache: {},
     packageCache: {},
     transform: [ babelify, lrload ],
-    debug: t.params.d
+    debug: t.params.d || t.params.debug
   })
 
   var w = watchify(b)
@@ -27,7 +27,7 @@ module.exports = function (t) {
   function rebundle () {
     w.bundle()
      .on('error', console.log)
-     .pipe(t.source('bundle.js'))
+     .pipe(t.source(t.files[1] || 'bundle.js'))
      .pipe(t.dest())
      .pipe(lrload.gulpnotify())
   }

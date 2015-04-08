@@ -21,4 +21,5 @@ app.get('/static/bundle.js', function (req, res) {
 app.listen(port)
 
 console.log(`listening on port ${port}`)
-opn('http://localhost:3000')
+
+opn(`http://localhost:${port}`)
