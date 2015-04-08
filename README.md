@@ -5,7 +5,7 @@ A babel - watchify - reactliveload development server in [chronic](https://githu
 
 ## Example
 
-```
+```js
 // build.js
 var chron = require('chronic');
 var lrload = require('lrload-chronic');
@@ -17,7 +17,7 @@ chron('live', chron
 )
 ```
 
-```
+```bash
 $ node build live -ds
 ```
 
