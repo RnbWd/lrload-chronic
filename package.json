@@ -1,0 +1,50 @@
+{
+  "name": "lrload-chronic",
+  "description": "livereactload + babel + watchify",
+  "version": "0.0.1",
+  "author": {
+    "name": "David Wisner",
+    "email": "dwisner6@gmail.com",
+    "url": "http://rnbwd.com"
+  },
+  "bugs": {
+    "url": "https://github.com/rnbwd/lrload-chronic/issues"
+  },
+  "dependencies": {
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.7",
+    "livereactload": "^0.3.0",
+    "watchify": "^3.1.0"
+  },
+  "devDependencies": {
+    "chronic": "0.5.0-beta.3",
+    "express": "4.12.3",
+    "livereactload": "0.3.0",
+    "mocha": "*",
+    "react": "0.13.1",
+    "opn": "1.0.1",
+    "through2": "1.1.1"
+  },
+  "homepage": "https://github.com/rnbwd/lrload-chron",
+  "keywords": [
+    "chronic",
+    "chronic-plugin",
+    "react",
+    "babel",
+    "browserify",
+    "watchify",
+    "livereactload"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/codingalchemy/Eschaton.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
