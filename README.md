@@ -1,7 +1,7 @@
 lrload-chronic
 -----
 
-A react - babel - watchify - reactliveload development server in [chronic](https://github.com/RnbWd/chronic)
+A babel - watchify - reactliveload development server in [chronic](https://github.com/RnbWd/chronic)
 
 ## Example
 
