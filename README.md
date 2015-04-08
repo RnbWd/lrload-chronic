@@ -31,12 +31,11 @@ The compiled file will be renamed `bundle.js` by default, this can be overwritte
 
 `chron.source('<path-to-entry>', '<custom-name>')`
 
-For an inline sourcemap include '-d' in the command prompt
-
-For a dev server include '-s' in the command prompt. (or '-ds' for both)
+For an inline sourcemap use `-d` in the command prompt, for a dev server use `-s`, or for both use `-ds`.
 
 `$ node <path-to-chronic-file> <task-name> -ds`
 
+Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files.
 
 
 ## License
