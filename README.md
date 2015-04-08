@@ -1,7 +1,7 @@
-# lrload-chronic
+lrload-chronic
 -----
 
-Module that starts a react - watchify - reactliveload development server in [chronic](https://github.com/RnbWd/chronic)
+A react - watchify - reactliveload development server in [chronic](https://github.com/RnbWd/chronic)
 
 ## Example
 
