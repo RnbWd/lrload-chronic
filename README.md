@@ -23,7 +23,7 @@ $ node build live -ds
 
 ## How to Use
 
-You must include a source file which will be used for the entry point in browserify/watchify, also a destination directory. This is defined in chronic:
+Include a source file for the entry point in browserify/watchify, and a destination directory. This is defined in chronic:
 
 `chron.source('<path-to-entry>').dest('<path-to-directory>')`
 
