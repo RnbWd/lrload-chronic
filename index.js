@@ -31,4 +31,8 @@ module.exports = function (t) {
      .pipe(t.dest())
      .pipe(lrload.gulpnotify())
   }
+
+  if (t.params.s || t.params.serve) {
+    require('./server')
+  }
 }
