@@ -1,6 +1,6 @@
 {
   "name": "lrload-chronic",
-  "description": "livereactload + babel + watchify",
+  "description": "livereactload - babel - watchify",
   "version": "0.0.1",
   "author": {
     "name": "David Wisner",
