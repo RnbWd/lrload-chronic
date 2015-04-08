@@ -2,6 +2,7 @@ var lrload = require('livereactload')
 var browserify = require('browserify')
 var watchify = require('watchify')
 var babelify = require('babelify')
+var server = require('./server');
 
 module.exports = function (t) {
   // start livereact server
@@ -18,6 +19,8 @@ module.exports = function (t) {
 
   var w = watchify(b)
 
+  var name = t.files[1] || 'bundle.js';
+
   rebundle()
 
   w.on('error', console.log)
@@ -27,12 +30,12 @@ module.exports = function (t) {
   function rebundle () {
     w.bundle()
      .on('error', console.log)
-     .pipe(t.source(t.files[1] || 'bundle.js'))
+     .pipe(t.source(name))
      .pipe(t.dest())
      .pipe(lrload.gulpnotify())
   }
 
   if (t.params.s || t.params.serve) {
-    require('./server')
+    server('/' + t.path + '/' + name);
   }
 }

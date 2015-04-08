@@ -6,20 +6,25 @@ var app = express()
 
 var port = process.env.PORT || 3000
 
-app.get('/', function (req, res) {
-  res.send(`<!DOCTYPE html>
-     <html>
-     <head><title>LiveReactload basic example</title></head>
-     <body><div id="app"></div><script type="text/javascript" src="/static/bundle.js"></script></body>
-     </html>`)
-})
+module.exports = function (spath) {
+  spath = spath || '/static/bundle.js';
 
-app.get('/static/bundle.js', function (req, res) {
-  res.send(fs.readFileSync('static/bundle.js'))
-})
+  app.get('/', function (req, res) {
+    res.send(`<!DOCTYPE html>
+      <html>
+      <head><title>LiveReactload basic example</title></head>
+      <body><div id="app"></div><script type="text/javascript" src=${spath}></script></body>
+      </html>`
+    )
+  })
 
-app.listen(port)
+  app.get(spath, function (req, res) {
+    res.send(fs.readFileSync(spath))
+  })
 
-console.log(`listening on port ${port}`)
+  app.listen(port)
 
-opn(`http://localhost:${port}`)
+  console.log(`listening on port ${port}`)
+
+  opn(`http://localhost:${port}`)
+}

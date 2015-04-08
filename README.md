@@ -12,7 +12,7 @@ var lrload = require('lrload-chronic');
 
 chron('live', chron
   .source('./src/main.js')
-  .dest('./static'),
+  .dest('static'),
   lrload
 )
 ```
@@ -39,7 +39,7 @@ Clone this repo for an example use case. Just run: `node testbuild live -ds` and
 
 ## Caveats
 
-The server uses es6 template strings, so I'd recommend using iojs to run the server (it's an easy fix if there's demand to change it, submit a pull request!)
+The server uses es6 template strings, so I'd recommend using iojs to run the server (it's an easy fix if there's demand to change it, submit a pull request!). The destination folder must also be a simple string for the correct path to show up.
 
 Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files.
 
