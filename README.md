@@ -35,6 +35,12 @@ For an inline sourcemap use `-d` in the command prompt, for a dev server use `-s
 
 `$ node <path-to-chronic-file> <task-name> -ds`
 
+Clone this repo for an example use case. Just run: `node testbuild live -ds` and edit the files in `src` - magic will happen.
+
+## Caveats
+
+The server uses es6 template strings, so I'd recommend using iojs to run the server (it's an easy fix if there's demand to change it, submit a pull request!)
+
 Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files.
 
 
