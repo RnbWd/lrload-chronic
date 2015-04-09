@@ -47,15 +47,14 @@ For all three (or any combo) use the shorthand:
 
 `$ node <path-to-chronic-file> <task-name> -dso`
 
-Clone this repo for an example use case. Just run: `node build -ds` and edit the files in `src` - magic will happen :)
-
+Clone this repo for an example use case. Just run: `node build -ds` (after `npm install`) and edit the files in `src` -- *reactliveload magic will happen* :)
 
 
 ## Caveats
 
-The server is mostly convience and uses es6 templates, so I'd recommend using your own static dev server in the build process. If you'd like to run the server, I'd recommend using iojs (the template strings are an easy fix, so submit a pull request or issue if you'd like to use the built-in server). The destination folder must also be a simple string for the correct path to show up in the express route (I know, I know).
+The server is mostly convience and uses es6 templates, so non-trivial cases I'd recommend using your own static dev server in the build process. If you'd like to run the server for easy dev start-time, iojs is guaranteed to work (the template strings are an easy fix thou, so submit a pull request or issue if you'd like to the dev server in older environment). Also, destination folder must also be a simple string for the correct path to show up in the express route (another reason to run your own server). This may improve over time, but the static server will probably become it's own module for generic use cases.
 
-Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files (or weird things will happen).
+Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files (weird things will happen probably, I haven't tried it).
 
 ## Credits
 
