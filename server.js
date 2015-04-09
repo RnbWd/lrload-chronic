@@ -7,7 +7,7 @@ var app = express()
 var port = process.env.PORT || 3000
 
 module.exports = function (spath) {
-  spath = spath || '/static/bundle.js';
+  spath = spath || 'static/bundle.js';
 
   app.get('/', function (req, res) {
     res.send(`<!DOCTYPE html>
@@ -18,7 +18,7 @@ module.exports = function (spath) {
     )
   })
 
-  app.get(spath, function (req, res) {
+  app.get(`/${spath}`, function (req, res) {
     res.send(fs.readFileSync(spath))
   })
 

@@ -1,7 +1,7 @@
 lrload-chronic
 -----
 
-A babel - watchify - reactliveload development server in [chronic](https://github.com/RnbWd/chronic)
+A [babel](https://babeljs.io/) - [watchify](https://github.com/substack/watchify) - [reactliveload](https://github.com/milankinen/livereactload) development server in [chronic](https://github.com/RnbWd/chronic)
 
 ## Example
 
@@ -43,6 +43,9 @@ The server uses es6 template strings, so I'd recommend using iojs to run the ser
 
 Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files.
 
+## Credits
+
+Example taken from [livereactload](https://github.com/milankinen/livereactload/tree/master/examples/05-build-systems)
 
 ## License
 
