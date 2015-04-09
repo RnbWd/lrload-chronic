@@ -37,11 +37,13 @@ For an inline sourcemap use `-d` in the command prompt, for a dev server use `-s
 
 Clone this repo for an example use case. Just run: `node testbuild live -ds` and edit the files in `src` - magic will happen.
 
+
+
 ## Caveats
 
-The server uses es6 template strings, so I'd recommend using iojs to run the server (it's an easy fix if there's demand to change it, submit a pull request!). The destination folder must also be a simple string for the correct path to show up.
+The server is mostly convience and uses es6 templates, so I'd recommend using your own static dev server in the build process. If you'd like to run the server, I'd recommend using iojs (the template strings are an easy fix, so submit a pull request or issue if you'd like to use the built-in server). The destination folder must also be a simple string for the correct path to show up in the express route (I know, I know).
 
-Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files.
+Watchify will watch everything in the browserify-pipeline by default, so it's not necessary to use chronic's `--watch` on any of those files (or weird things will happen).
 
 ## Credits
 
