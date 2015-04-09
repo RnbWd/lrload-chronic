@@ -36,6 +36,6 @@ module.exports = function (t) {
   }
 
   if (t.params.s || t.params.serve) {
-    server(t.path + '/' + name);
+    server(t.path + '/' + name, t.params.o || t.params.open);
   }
 }

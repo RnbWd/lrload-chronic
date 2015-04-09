@@ -6,7 +6,7 @@ var app = express()
 
 var port = process.env.PORT || 3000
 
-module.exports = function (spath) {
+module.exports = function (spath, oyes) {
   spath = spath || 'static/bundle.js';
 
   app.get('/', function (req, res) {
@@ -26,5 +26,5 @@ module.exports = function (spath) {
 
   console.log(`listening on port ${port}`)
 
-  opn(`http://localhost:${port}`)
+  if (oyes) opn(`http://localhost:${port}`)
 }

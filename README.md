@@ -31,11 +31,23 @@ The compiled file will be renamed `bundle.js` by default, this can be overwritte
 
 `chron.source('<path-to-entry>', '<custom-name>')`
 
-For an inline sourcemap use `-d` in the command prompt, for a dev server use `-s`, or for both use `-ds`.
+For an inline sourcemap use `-d` or `--debug` in the command prompt:
 
-`$ node <path-to-chronic-file> <task-name> -ds`
+`$ node <path-to-chronic-file> <task-name> --debug`
 
-Clone this repo for an example use case. Just run: `node testbuild live -ds` and edit the files in `src` - magic will happen.
+To start a dev server use `-s` or `--serve`:
+
+`$ node <path-to-chronic-file> <task-name> --serve`
+
+To open the site in your default browser use `-o` or `--open`:
+
+`$ node <path-to-chronic-file> <task-name> -s --open`
+
+For all three (or any combo) use the shorthand:
+
+`$ node <path-to-chronic-file> <task-name> -dso`
+
+Clone this repo for an example use case. Just run: `node build -ds` and edit the files in `src` - magic will happen :)
 
 
 
