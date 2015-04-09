@@ -24,7 +24,7 @@
     "mocha": "*",
     "react": "0.13.1"
   },
-  "homepage": "https://github.com/rnbwd/lrload-chron",
+  "homepage": "https://github.com/rnbwd/lrload-chronic",
   "keywords": [
     "babel",
     "browserify",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/codingalchemy/Eschaton.git"
+    "url": "http://github.com/rnbwd/lrload-chronic.git"
   },
   "scripts": {
     "test": "mocha"
