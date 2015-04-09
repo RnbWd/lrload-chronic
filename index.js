@@ -2,7 +2,6 @@ var lrload = require('livereactload')
 var browserify = require('browserify')
 var watchify = require('watchify')
 var babelify = require('babelify')
-var server = require('./server');
 
 module.exports = function (t) {
   // start livereact server
@@ -33,9 +32,5 @@ module.exports = function (t) {
      .pipe(t.source(name))
      .pipe(t.dest())
      .pipe(lrload.gulpnotify())
-  }
-
-  if (t.params.s || t.params.serve) {
-    server(t.path + '/' + name, t.params.o || t.params.open);
   }
 }
