@@ -39,9 +39,9 @@ To start a dev server use `-s` or `--serve`:
 
 `$ node <path-to-chronic-file> <task-name> --serve`
 
-To open the site in your default browser use `-o` or `--open`:
+To open the site in your default browser use `-o` or `--open` (must also include `-s` or `--server`:
 
-`$ node <path-to-chronic-file> <task-name> -s --open`
+`$ node <path-to-chronic-file> <task-name> -so`
 
 For all three (or any combo) use the shorthand:
 
